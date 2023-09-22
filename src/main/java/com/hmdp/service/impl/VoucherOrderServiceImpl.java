@@ -17,4 +17,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, VoucherOrder> implements IVoucherOrderService {
 
+    @Override
+    public boolean seckillVoucher(Long voucherId) {
+
+        return false;
+    }
 }
