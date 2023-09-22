@@ -2,6 +2,7 @@ package com.hmdp;
 
 import com.hmdp.entity.User;
 import com.hmdp.mapper.UserMapper;
+import com.hmdp.service.IShopService;
 import com.hmdp.service.IUserService;
 import com.hmdp.service.impl.UserServiceImpl;
 import com.hmdp.utils.RedisIdWorker;
@@ -24,12 +25,20 @@ class HmDianPingApplicationTests {
     private RedisIdWorker redisIdWorker;
 
     @Autowired
+    private IShopService shopService;
+
+    @Autowired
     private IUserService userService;
     @Test
     void testSaveUser(){
         User user = userService.createUser("17671052093");
         System.err.println(user.toString());
         //userMapper.saveUser("17671052093");
+    }
+
+    @Test
+    void testSaveShop(){
+        shopService.saveShop2Redis(1L,10L);
     }
 
 }
