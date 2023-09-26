@@ -26,7 +26,6 @@ public class VoucherOrderController {
 
     @PostMapping("seckill/{id}")
     public Result seckillVoucher(@PathVariable("id") Long voucherId) {
-        boolean type = voucherOrderService.seckillVoucher(voucherId);
-        return Result.fail("功能未完成");
+        return voucherOrderService.seckillVoucher(voucherId);
     }
 }

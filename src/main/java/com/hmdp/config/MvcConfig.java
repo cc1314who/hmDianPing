@@ -1,16 +1,11 @@
 package com.hmdp.config;
 
-import com.hmdp.dto.UserDTO;
-import com.hmdp.utils.UserHolder;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  * @ Author     ：maple.
@@ -22,9 +17,6 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
-
-
-
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
